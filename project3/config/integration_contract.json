@@ -1,0 +1,46 @@
+﻿{
+    "project":  "Pakistan Social Audience Intelligence",
+    "version":  "1.0",
+    "integration_status":  "Ready for future integration",
+    "existing_streamlit_app":  "app.py",
+    "project1":  {
+                     "name":  "SHEIN Sentiment Analysis",
+                     "direction":  "Project 1 -\u003e Project 3",
+                     "required_fields":  [
+                                             "comment_text",
+                                             "sentiment"
+                                         ],
+                     "optional_fields":  [
+                                             "clean_text",
+                                             "video_url",
+                                             "video_title",
+                                             "is_mixed"
+                                         ],
+                     "requirement":  "Validate schema, provenance and comment IDs"
+                 },
+    "project2":  {
+                     "name":  "AdSpend IQ",
+                     "direction":  "Project 2 \u003c-\u003e Project 3",
+                     "required_fields":  [
+                                             "platform",
+                                             "campaign"
+                                         ],
+                     "additional_fields":  [
+                                               "content_type",
+                                               "cluster_id",
+                                               "anomaly_score"
+                                           ],
+                     "requirement":  "Match compatible data sources and campaign identifiers"
+                 },
+    "project3_exports":  [
+                             "marketing_audience_needs.csv",
+                             "marketing_content_performance.csv",
+                             "marketing_recommendations.csv",
+                             "detected_anomalies.csv"
+                         ],
+    "restrictions":  [
+                         "Do not treat synthetic records as real observations",
+                         "Do not merge unrelated campaigns by platform name alone",
+                         "Do not infer ROAS from sentiment or engagement counts"
+                     ]
+}
